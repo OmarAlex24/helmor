@@ -1,5 +1,21 @@
 # Changelog
 
+## 0.34.2
+
+### Patch Changes
+
+- [#786](https://github.com/dohooo/helmor/pull/786) [`3b8ac9f`](https://github.com/dohooo/helmor/commit/3b8ac9f367cf95cbb918f97345d935e62c8a84c6) Thanks [@natllian](https://github.com/natllian)! - Fix the top-right Create PR / MR button getting stuck on "Create" after the pull request is already open:
+
+  - Creating PRs across several workspaces around the same time now reliably syncs each one's PR and CI status and auto-closes its action session, instead of only the last workspace you triggered.
+  - A workspace whose branch is already pushed to the remote now detects its open PR even when the local clone is missing the remote-tracking ref.
+
+- [#782](https://github.com/dohooo/helmor/pull/782) [`abc7f41`](https://github.com/dohooo/helmor/commit/abc7f41790b989020f701bcba9dfee4a0655c648) Thanks [@natllian](https://github.com/natllian)! - Fix composer input-history recall stealing arrow keys in multi-line drafts.
+
+  - Arrowing back down through history to a multi-line in-progress draft no longer loses the cursor.
+  - ArrowUp on a blank Shift+Enter line now moves the caret up instead of recalling history.
+
+- [#783](https://github.com/dohooo/helmor/pull/783) [`3c46f0b`](https://github.com/dohooo/helmor/commit/3c46f0b424f66c289b4d6415bcf434e878d6ebc9) Thanks [@natllian](https://github.com/natllian)! - Share the bundled-binary download cache across git worktrees and CI jobs so dev and CI builds reuse already-fetched archives instead of re-downloading them.
+
 ## 0.34.1
 
 ### Patch Changes
